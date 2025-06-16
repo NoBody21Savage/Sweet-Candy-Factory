@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Fredoka", sans-serif;
+    background-color: #FF638A;
+    color: #333;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    background-color: #FFD41D;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+header h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 2rem;
+}
+
+header a{
+    font-family: 'Fredoka', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.cart-container {
+    max-width: 900px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+.cart-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #cc0066;
+    border-bottom: 2px solid #ffe6f0;
+    padding-bottom: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid #f2d9e6;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item .item-name {
+    font-weight: 600;
+}
+
+.cart-item .item-qty,
+.cart-item .item-price {
+    font-weight: 400;
+}
+
+.total {
+    text-align: right;
+    margin-top: 30px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #cc0066;
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.actions a,
+.actions button {
+    padding: 10px 20px;
+    background-color: #ff66a3;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.actions a:hover,
+.actions button:hover {
+    background-color: #e60073;
+}
+
+.empty-cart-message {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 50px;
+    color: #999;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #ffe6f0;
+    text-align: center;
+    color: #666;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+main > h2{
+    margin-top: 100px;
+    font-size: 70px;
+}
+
+#emptywrap > p{
+    font-size: 30px;
+}
+
+#emptywrap  > p > a{
+    text-decoration: none;
+    color: black;
+}
+
+#emptywrap  {
+    display: flex;
+    width: 330px;
+    height: 60px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #cc0066bb;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+#emptywrap  > img{
+    height: 30px;
+    cursor: pointer;
+}
+
+table{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+thead{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+thead > tr{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+thead > tr > th{
+    width: 170px;
+    padding: 5px;
+}
+tbody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+}
+
+tbody > tr{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+tbody > tr > td{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    text-align: center;
+    justify-content: center;
+    width: 170px;
+    padding: 2px;
+}
+
+tr{
+    padding: 5px;
+}
+
+thead > tr > th:nth-child(1){
+    border-radius: 5px;
+    background-color: #d1046b71;
+}
+thead > tr > th:nth-child(2){
+    border-radius: 5px;
+    background-color: #d1046b71;
+}
+thead > tr > th:nth-child(3){
+    border-radius: 5px;
+    background-color: #d1046b71;
+}
+thead > tr > th:nth-child(4){
+    border-radius: 5px;
+    background-color: #d1046b71;
+}
+
+tbody > tr > td:hover{
+    border-radius: 5px;
+    background-color: #d1046b71;
+}
+
+#remove-button{
+    width: 170px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Fredoka", sans-serif;
+    background-color: #FFD41D;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#remove-button:hover{
+    background-color: #e6be17;
+}
+
+tfoot > tr > th{
+    font-weight: 700;
+    padding-top: 10px;
+    padding: 2px;
+    font-size: 1.5rem;
+}
+
+tfoot{
+    margin-top: 10px;
+}
+
+#emp-check_form{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 72.5%;
+    gap: 20px;
+}
+
+#clear-button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Fredoka", sans-serif;
+    background-color: #FFD41D;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+    height: 40px;
+    width: 170px;
+    align-self: flex-end;
+}
+#checkout-button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Fredoka", sans-serif;
+    background-color: #FFD41D;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+#clear-button:hover{
+    background-color: #e6be17;
+}
+#checkout-button:hover{
+    background-color: #e6be17;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #0084ffd5;
+    color: black;
+    height: 12%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
